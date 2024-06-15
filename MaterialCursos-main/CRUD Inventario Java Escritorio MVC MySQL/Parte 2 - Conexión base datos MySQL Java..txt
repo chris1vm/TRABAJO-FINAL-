@@ -1,0 +1,18 @@
+   Connection con;//Intancia de Connection 
+   String driver = "com.mysql.jdbc.Driver"; //Libreria version 5
+   // String driver = "com.mysql.cj.jdbc.Driver"; //Libreria version 8
+   String dbName = "productos";
+   String url = "jdbc:mysql://localhost:3306/"+dbName+"?useSSL=false&serverTimezone=UTC"; // Url de base de datos
+   String usuario = "root"; // Variable para usuario de la base de datos
+   String password = "123456789"; // Variable para usuario de la base de datos
+    
+   public Connection ConectarBaseDatos() {
+       try{
+           Class.forName(driver);
+           con = (Connection) DriverManager.getConnection(url, usuario, password);
+           System.out.println("Coneccion Correcta");
+        }catch(ClassNotFoundException | SQLException e){
+            System.out.println("Error en la conexion:" + e);
+        }
+        return con;
+    }

@@ -1,0 +1,22 @@
+Versión 5 .
+- Error en la conexion:java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+
+Ocurre al usar una conexión obsoleta de la librería, puesto que usamos MySQL V.8.x
+
+
+
+Versión 8 .
+MySQL connector
+- https://www.mysql.com/products/connector/
+   - JDBC Driver for MySQL (Connector/J)
+      - Select Operating System:
+        + Platform Independent
+        *Platform Independent (Architecture Independent), ZIP Archive*
+ 
+
+ - Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. 
+   The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+
+Error español.
+- Cargando clase `com.mysql.jdbc.Driver '. Esto está desaprobado. La nueva clase de controlador es `com.mysql.cj.jdbc.Driver'.
+   El controlador se registra automáticamente a través del SPI y la carga manual de la clase de controlador generalmente no es necesaria.

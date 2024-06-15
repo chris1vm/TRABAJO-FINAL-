@@ -1,0 +1,13 @@
+https://tomcat.apache.org/download-80.cgi
+
+tomcat-user: 
+<user password="admin" roles="manager-script,admin,manager-gui" username="admin"/>
+
+
+tools > servers > add server..
+seleccionar tomcat > start
+localhost:8090
+
+Nuevo proyecto...
+java with maven
+web application
